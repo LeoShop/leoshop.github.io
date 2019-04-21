@@ -1,0 +1,13 @@
+.aside-right {
+    width: 23.5%;
+    margin-top: 47px;
+    display: flex;
+    flex-direction: column;
+
+    @include max(1023px) {
+        display: none;
+    }
+    & img+img {
+        margin-top: 30px;
+    }
+    }

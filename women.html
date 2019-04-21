@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LEO shop</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__top">
+            <div class="content">
+                <div class="header__top-left-menu">
+                    <form class="header__top-choose">
+                        <p>Language:</p>
+                        <select class="header__top-choose-select">
+                            <option disabled class="option-disabled">Choose Language</option>
+                            <option selected value="English">English</option>
+                            <option value="Russian">Russian</option>
+                        </select>
+                    </form>
+                    <form class="header__top-choose">
+                        <p>Currency:</p>
+                        <select class="header__top-choose-select">
+                            <option disabled>Choose Currency</option>
+                            <option selected value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="header__right-menu">
+                    <button class="header__right-menu-button">Account</button>
+                    <span>|</span>
+                    <button class="header__right-menu-button">Wishlist</button>
+                    <span>|</span>
+                    <button class="header__right-menu-button">Checkout</button>
+                    <span>|</span>
+                    <button class="header__right-menu-button open-button" onclick="openForm()">Log In</button>
+                    <div class="form-popup" id="myForm">
+                        <form action="#" class="form-container">
+                            <h1>Login</h1>
+
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit" class="btn">Login</button>
+                            <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+                        </form>
+                    </div>
+                    <span>|</span>
+                    <button class="header__right-menu-button" onclick="openFormReg()">Sign Up</button>
+                    <div class="form-popup" id="myFormReg">
+                        <form action="#" class="form-container">
+                            <h1>Register</h1>
+
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit" class="btn">Register</button>
+                            <button type="submit" class="btn cancel" onclick="closeFormReg()">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="content header__bottom-wrapper">
+                <h1 class="header__bottom-logo">
+                    <span class="letter1 letter">l</span><span class="letter2 letter">e</span><span
+                        class="letter3 letter">o</span>
+                    <span class="letter4 letter">s</span><span class="letter5 letter">h</span><span
+                        class="letter6 letter">o</span><span class="letter7 letter">p</span>
+                </h1>
+                <nav class="header__bottom-nav">
+                    <div class="menu-mobile js-humburger">
+                        <div class="menu-mobile__link"></div>
+                    </div>
+                    <ul class="header__bottom-nav-list js-navigation">
+                        <li class="header__bottom-nav-item"><a href="index.html" target="_blank" title="home">home</a>
+                        </li>
+                        <li class="header__bottom-nav-item"><a href="women.html" target="_blank" title="women">women</a>
+                        </li>
+                        <li class="header__bottom-nav-item"><a href="men.html" target="_blank" title="men">men</a></li>
+                        <li class="header__bottom-nav-item"><a href="other.html" target="_blank" title="other">other</a>
+                        </li>
+                        <li class="header__bottom-nav-item"><a href="contacts.html" target="_blank" title="contacts">contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form class="header__bottom-search" action="" target="_blank">
+                    <input type="search" name="text" required placeholder="Search..">
+                    <a href="#"><img src="images/img_1.png" alt=""></a>
+                    <a href="#"><img src="images/img_2.png" alt=""></a>
+                    <a href="#">Cart 1</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="images/glass.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/glass_3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/glass_13.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/glass_21.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/glass_20.jpg" alt=""></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+
+    </div>
+    <main class="main">
+        <div class="content">
+            <div class="main__content main__content-solo">
+                <div class="main__content-featured">
+                    <h1 class="main__content-title">Women Products</h1>
+                    <div class="products-grid">
+                        <div class="products-grid__item">
+                            <img src="images/new-product.png" alt="" class="new-product">
+                            <div class="glass-wrapper">
+                                <a data-fancybox="gallery" href="images/glasses_1.png" data-width="500" data-height="400"><img class="glass" src="images/glasses_1.png" alt="glass_1"></a>
+                            </div>
+                            <div class="products-grid__item-bottom">
+                                <p>Lorem Ipsum is simply. <span class="price">$388.00</span></p>
+                                <a class="bracket" href="#" title=""><img src="images/bracket.png" alt="bracket"></a>
+                            </div>
+                        </div>
+                        <div class="products-grid__item">
+                            <div class="glass-wrapper">
+                                <a data-fancybox="gallery" href="images/glasses_2.png" data-width="500" data-height="400"><img class="glass" src="images/glasses_2.png" alt="glass_2"></a>
+                            </div>
+                            <div class="products-grid__item-bottom">
+                                <p>Nullam vestibulum. <span class="price">$90.00</span></p>
+                                <a class="bracket" href="#" title=""><img src="images/bracket.png" alt="bracket"></a>
+                            </div>
+                        </div>
+                        <div class="products-grid__item">
+                            <div class="glass-wrapper">
+                                <img src="images/sale-product.png" alt="" class="sale-product">
+                                <a data-fancybox="gallery" href="images/glasses_3.png" data-width="500" data-height="400"><img class="glass" src="images/glasses_3.png" alt="glass_3"></a>
+                            </div>
+                            <div class="products-grid__item-bottom">
+                                <p>Donec et lorem suscipit. <span class="sale">$460</span><span
+                                        class="price">$300.00</span>
+                                </p>
+                                <a class="bracket" href="#" title=""><img src="images/bracket.png" alt="bracket"></a>
+                            </div>
+                        </div>
+                        <div class="products-grid__item">
+                            <div class="glass-wrapper">
+                                <a data-fancybox="gallery" href="images/glasses_4.png" data-width="500" data-height="400"><img class="glass" src="images/glasses_4.png" alt="glass_4"></a>
+                            </div>
+                            <div class="products-grid__item-bottom">
+                                <p>Curabitur pretium dui. <span class="price">$180.00</span></p>
+                                <a class="bracket" href="#" title=""><img src="images/bracket.png" alt="bracket"></a>
+                            </div>
+                        </div>
+                        <div class="products-grid__item">
+                            <img src="images/new-product.png" alt="" class="new-product">
+                            <div class="glass-wrapper">
+                                <a data-fancybox="gallery" href="images/glasses_5.png" data-width="500" data-height="400"><img class="glass" src="images/glasses_5.png" alt="glass_5"></a>
+                            </div>
+                            <div class="products-grid__item-bottom">
+                                <p>Lorem Ipsum is simply. <span class="price">$278.00</span></p>
+                                <a class="bracket" href="#" title=""><img src="images/bracket.png" alt="bracket"></a>
+                            </div>
+                        </div>
+                        <div class="products-grid__item">
+                            <div class="glass-wrapper">
+                                <a data-fancybox="gallery" href="images/glasses_6.png" data-width="500" data-height="400"><img class="glass" src="images/glasses_6.png" alt="glass_6"></a>
+                            </div>
+                            <div class="products-grid__item-bottom">
+                                <p>Sed tempus tellus. <span class="price">$378.00</span></p>
+                                <a class="bracket" href="#" title=""><img src="images/bracket.png" alt="bracket"></a>
+                            </div>
+                        </div>
+                        <div class="products-grid__item">
+                            <img src="images/new-product.png" alt="" class="new-product">
+                            <div class="glass-wrapper">
+                                <a data-fancybox="gallery" href="images/glasses_7.png" data-width="500" data-height="400"><img class="glass" src="images/glasses_7.png" alt="glass_7"></a>
+                            </div>
+                            <div class="products-grid__item-bottom">
+                                <p>Lorem Ipsum is simply. <span class="price">$500.00</span></p>
+                                <a class="bracket" href="#" title=""><img src="images/bracket.png" alt="bracket"></a>
+                            </div>
+                        </div>
+                        <div class="products-grid__item">
+                            <div class="glass-wrapper">
+                                <img src="images/sale-product.png" alt="" class="sale-product">
+                                <a data-fancybox="gallery" href="images/glasses_8.png" data-width="500" data-height="400"><img class="glass" src="images/glasses_8.png" alt="glass_8"></a>
+                            </div>
+                            <div class="products-grid__item-bottom">
+                                <p>Etiam egestas velit. <span class="sale">$460</span><span class="price">$200.00</span>
+                                </p>
+                                <a class="bracket" href="#" title=""><img src="images/bracket.png" alt="bracket"></a>
+                            </div>
+                        </div>
+                        <div class="products-grid__item">
+                            <img src="images/new-product.png" alt="" class="new-product">
+                            <div class="glass-wrapper">
+                                <a data-fancybox="gallery" href="images/glasses_9.png" data-width="500" data-height="400"><img class="glass" src="images/glasses_9.png" alt="glass_9"></a>
+                            </div>
+                            <div class="products-grid__item-bottom">
+                                <p>Curabitur pretium dui. <span class="price">$188.00</span></p>
+                                <a class="bracket" href="#" title=""><img src="images/bracket.png" alt="bracket"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="content">
+                <a class="footer__top-ship" href="#"><img src="images/free-shipping.png" alt="free-shipping"><span>Free
+                        shipping on orders over
+                        $100</span></a>
+                <a class="footer__top-call" href="tel:40988880099"><img src="images/call-us.png" alt="call-us"><span>call us! toLl
+                        free-
+                        409-8888-0099</span></a>
+            </div>
+        </div>
+        <div class="footer__middle">
+            <div class="content">
+                <div class="footer__middle-box">
+                    <h1 class="facebook">Facebook</h1>
+                    <p>20000 Members</p>
+                    <a href="#">
+                        <img class="like" src="images/like.png" alt="like"></a>
+                    <div class="facebook-users">
+                        <img src="images/photo_1.png" alt="" class="facebook-users__photo">
+                        <img src="images/photo_2.png" alt="" class="facebook-users__photo">
+                        <img src="images/photo_3.png" alt="" class="facebook-users__photo">
+                        <img src="images/photo_4.png" alt="" class="facebook-users__photo">
+                        <img src="images/photo_5.png" alt="" class="facebook-users__photo">
+                        <img src="images/photo_6.png" alt="" class="facebook-users__photo">
+                        <img src="images/photo_7.png" alt="" class="facebook-users__photo">
+                        <img src="images/photo_8.png" alt="" class="facebook-users__photo">
+                    </div>
+                    <p>facebook Social plugin</p>
+                </div>
+                <div class="footer__middle-box">
+                    <h1 class="twitter">Twitter</h1>
+                    <div class="twitter-link">
+                        <a href="#"><img src="images/twitter.png" alt=""></a>
+                        <p>Lorem Ipsum is simply dummy text of the printing and <span>typesetting industry. Lorem
+                                Ipsum</span> has been the</p>
+                    </div>
+                    <div class="twitter-link">
+                        <a href="#"><img src="images/twitter.png" alt=""></a>
+                        <p>Lorem Ipsum is simply dummy text of the printing and <span>typesetting industry. Lorem
+                                Ipsum</span> has been the</p>
+                    </div>
+                </div>
+                <div class="footer__middle-box">
+                    <h1 class="information">Information</h1>
+                    <p>> Sed ultrices purus non.</p>
+                    <p>> sodales sodales.</p>
+                    <p>> Curabitur pretium dui vitae.</p>
+                    <p>> Donec gravida mi in nisl</p>
+                    <p>> faucibus leo condimentum.</p>
+                    <p>> Donec et lorem suscipit.</p>
+                </div>
+                <div class="footer__middle-box">
+                    <h1 class="contact">Contact Us</h1>
+                    <p>Leo Store</p>
+                    <p>Leopards media</p>
+                    <p>KVM Rpad, 4590GH</p>
+                    <p>+1 489-8888-0099</p>
+                    <p>mail@email.com</p>
+                    <div class="social-nets">
+                        <a href="https://g.co/kgs/NwYsUJ"><img src="images/google.png" alt="google" target="_blank"></a>
+                        <a href="https://g.co/kgs/Jqdh1m"><img src="images/in.png" alt="in" target="_blank"></a>
+                        <a href="#"><img src="images/wifi.png" alt="wifi" target="_blank"></a>
+                        <a href="https://g.co/kgs/TgFfhF"><img src="images/facebook.png" alt="facebook" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="content">
+                <p class="footer__bottom-copyright">© Copyright 2013 Css Author, All Rights Reserved.</p>
+                <ul class="footer__bottom-menu">
+                    <li class="menu-item"><a href="about.html" target="_blank">About Us</a></li>
+                    <span>|</span>
+                    <li class="menu-item"><a href="#" target="_blank">Delivery & Returns</a></li>
+                    <span>|</span>
+                    <li class="menu-item"><a href="#" target="_blank">Terms & Conditions</a></li>
+                    <span>|</span>
+                    <li class="menu-item"><a href="contacts.html" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

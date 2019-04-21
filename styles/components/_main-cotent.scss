@@ -1,0 +1,82 @@
+.main {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin-top: 47px;
+
+        @include max(1023px) {
+            width: 100%;
+        }
+
+        &-featured {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 32px;
+
+            .social-nets {
+                background-color: $main-bcg;
+                margin-bottom: 30px;
+
+                a img {
+                    padding: 10px;
+                }
+            }
+
+            & p {
+                margin: 20px 0;
+            }
+
+            .contacts {
+                font-size: $font-contacts;
+
+                &-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    background-color: $main-bcg;
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        &-staff {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 41px;
+        }
+
+        &-new {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 52px;
+        }
+
+        &-title {
+            margin-bottom: 24px;
+        }
+
+        &-solo {
+            width: 100%;
+        }
+    }
+}
+
+.map-responsive {
+    // overflow:hidden;
+    // padding-bottom:56.25%;
+    // position:relative;
+    // height:0;
+    @include aspect-ratio(1000px, 500px);
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.compensate-for-scrollbar {
+    margin: 0 auto;
+}

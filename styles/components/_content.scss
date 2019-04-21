@@ -1,0 +1,12 @@
+.content {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+  @include max(1023px) {
+    justify-content: center;
+  }
+}
